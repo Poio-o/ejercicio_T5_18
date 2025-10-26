@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         try {
-            boolean distintos = true;
+            boolean distintos;
             int num1;
             int num2;
             do {
@@ -9,6 +9,9 @@ public class App {
                 num2 = Integer
                         .parseInt(System.console().readLine("Introduzca otro número entero distinto al anterior: "));
                 if (num1 == num2) {
+                    distintos = false;
+                    System.out.println("Los números no pueden ser iguales");
+                } else {
                     distintos = true;
                 }
             } while (distintos == false);
